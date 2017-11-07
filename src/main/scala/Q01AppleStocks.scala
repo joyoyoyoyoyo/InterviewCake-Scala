@@ -6,6 +6,7 @@ object Q01AppleStocks extends App {
     for (
       innerTime <- stockPricesYesterday.indices;
       outterTime <- stockPricesYesterday.indices) {
+
       // for each pair find the earlier and later times
       val earlierTime = Math.min(outterTime, innerTime)
       val laterTime = Math.max(outterTime, innerTime)
