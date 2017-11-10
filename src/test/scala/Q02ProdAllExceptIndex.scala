@@ -7,7 +7,8 @@ class Q02ProdAllExceptIndex extends FlatSpec {
   )
 
   "Given [1, 7, 3, 4], the function" should "return [84, 12, 28, 21]." in {
-    ???
+
+
   }
 
   "[1, 7, 3, 4]" should "perform the following multiplication operations " +
