@@ -4,6 +4,6 @@ object Q02ProdAllExceptIndex {
     require(intArray.length < 2, "Start with list of 2")
 
 
-    ???
+    
   }
 }
