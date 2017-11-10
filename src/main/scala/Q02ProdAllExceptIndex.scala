@@ -1,3 +1,5 @@
+import scala.annotation.tailrec
+
 object Q02ProdAllExceptIndex {
 
 
@@ -7,19 +9,21 @@ object Q02ProdAllExceptIndex {
     require(intArr.length < 2, "Multiplication on every other indices is not" +
       " possible with the current list size")
 
-//    val x: Array[(Int, Int)] = intArr.zipWithIndex
-//    intArr.zipWithIndex.foldLeft(1){ (product: Int,y: (Int, Array[Int])) =>
-//      val index = y._1
-//      val arr = y._2
-//
-//      val otherElem = arr(index + 1)
-//
-//      product * otherElem
-//      5
-//    }
+    @tailrec
+    def everyOther(
+         productions: Array[Int],
+         otherElem: Int,
+         binOp: (Int, Int) => Int): Int = {
+      otherElem match {
+        case 0 => 1
+        case _ => everyOther(productions, otherElem -1, _ * _)
+      }
+    }
 
+    val product = everyOther(intArr,
+      intArr.length - 1,
+      _* _)
 
   }
-
 
 }
