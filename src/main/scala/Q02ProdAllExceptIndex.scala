@@ -15,7 +15,7 @@ object Q02ProdAllExceptIndex {
          otherElem: Int,
          binOp: (Int, Int) => Int): Int = {
       otherElem match {
-        case 0 => 1
+        case 0 => otherElem
         case _ => everyOther(productions, otherElem -1, _ * _)
       }
     }
@@ -23,7 +23,10 @@ object Q02ProdAllExceptIndex {
     val product = everyOther(intArr,
       intArr.length - 1,
       _* _)
-
+    product
   }
+
+  val given = Array(1, 7, 3,4)
+  getProductsOfAllIntsExceptAtIndex(given)
 
 }

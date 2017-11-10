@@ -1,6 +1,6 @@
 import org.scalatest.FlatSpec
 
-class Q02ProdAllExceptIndex extends FlatSpec {
+class Q02ProdAllExceptIndexTest extends FlatSpec {
 
   val tests = Map(
     Array(1, 7, 3, 4) -> Array(84, 12, 28, 21)
@@ -8,12 +8,15 @@ class Q02ProdAllExceptIndex extends FlatSpec {
 
   "Given [1, 7, 3, 4], the function" should "return [84, 12, 28, 21]." in {
 
+    val given = Array(1, 7, 3,4)
+
+    Q02ProdAllExceptIndex.getProductsOfAllIntsExceptAtIndex(given)
 
   }
 
   "[1, 7, 3, 4]" should "perform the following multiplication operations " +
     "[7 * 3 * 4,  1 * 3 * 4,  1 * 7 * 4,  1 * 7 * 3]." in {
-    ???
+//    ???
   }
 
 }
