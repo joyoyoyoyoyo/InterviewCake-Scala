@@ -1,28 +1,26 @@
 import scala.annotation.tailrec
 
-object Q02_ProductOfAllOtherIntegers {
+object Q02_ProductOfAllOtherIntegers  extends App {
 
-
+  getProductsOfAllIntsExceptAtIndex(Array(1, 2, 3, 4, 5))
 
   def getProductsOfAllIntsExceptAtIndex(intArr: Array[Int]) = {
 
-    require(intArr.length < 2, "Multiplication on every other indices is not" +
+    require(intArr.length > 2, "Multiplication on every other indices is not" +
       " possible with the current list size")
 
-    @tailrec
-    def everyOther(
-         productions: Array[Int],
-         otherElem: Int,
-         binOp: (Int, Int) => Int): Int = {
-      otherElem match {
-        case 0 => 1
-        case _ => everyOther(productions, otherElem -1, _ * _)
-      }
-    }
+    var productSoFar = 1
 
-    val product = everyOther(intArr,
-      intArr.length - 1,
-      _* _)
+    // Perform first traversal to calculate all products of indices before index i
+    val allIndices = for(
+      (num, idx) <- intArr.zipWithIndex
+    ) yield (num, idx)
+    println(allIndices.mkString(" "))
+
+    // Iterate backwards from last indices to multiply current_products_so_far with all iterations after the index
+
+
+    // return result
 
   }
 
