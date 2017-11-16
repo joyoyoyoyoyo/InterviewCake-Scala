@@ -1,6 +1,6 @@
 import scala.annotation.tailrec
 
-object Q02ProdAllExceptIndex {
+object Q02_ProductOfAllOtherIntegers {
 
 
 
