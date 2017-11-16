@@ -12,16 +12,19 @@ object Q02_ProductOfAllOtherIntegers  extends App {
     var productSoFar = 1
 
     // Perform first traversal to calculate all products of indices before index i
-    val allIndices = intArr.zipWithIndex.scanLeft(1)(  (soFar: Int, currentElement) => {
-
+    // O(n) memory cost
+    val productBeforeIndex = intArr.zipWithIndex.scanLeft(1)(  (soFar: Int, currentElement) => {
       val number = currentElement._1
       val idx = currentElement._2
       intArr(idx) * soFar
     })
-    println(allIndices.mkString(" "))
+    println(productBeforeIndex.mkString(" "))
 
 
     // Iterate backwards from last indices to multiply current_products_so_far with all iterations after the index
+    // O(n) memory cost
+
+    // combine final result
 
 
     // return result
