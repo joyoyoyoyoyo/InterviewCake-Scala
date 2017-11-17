@@ -25,11 +25,30 @@
   */
 object Q05_MakingChange extends App {
 
-  val denominations = Array(1, 2, 3, 4)
+  // Each denomination is a coin or cent
+  val coins = Array(1, 2, 3)
   val amount = 4
 
-  val makeChange = () => (denominations: Array[Int]) = {
+  val number_of_iterations = Solution.makeChange(denominations=coins, amount)
 
+
+  val message = s"Number of Ways to Make Amount $amount, with coins"
+  println(message)
+
+}
+
+object Solution {
+
+  def makeChange(denominations: Array[Int], amountSought: Int) = {
+    require(denominations.size > 0 && amountSought > 0)
+
+    def loop(denominations: Seq[Int], amountLeft: Int): Int = {
+      denominations match {
+        case coin +: Seq() => { println(s"$coin"); coin }
+        case head +: tail => { println(s"$head"); loop(tail, amountLeft - head) }
+      }
+    }
+
+    loop(denominations, amountSought)
   }
-
 }
