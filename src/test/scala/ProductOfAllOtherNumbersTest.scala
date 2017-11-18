@@ -1,6 +1,6 @@
 import org.scalatest.FlatSpec
 
-class Q02_ProductOfAllOtherNumbersTest extends FlatSpec {
+class ProductOfAllOtherNumbersTest extends FlatSpec {
 
   val tests = Map(
     Array(1, 7, 3, 4) -> Array(84, 12, 28, 21)
