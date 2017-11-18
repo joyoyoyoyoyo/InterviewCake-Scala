@@ -23,21 +23,13 @@
   *   4. 2 cent, 2 cent
   *
   */
-object Q05_MakingChange extends App {
+object MakingChange {
 
   // Each denomination is a coin or cent
   val coins = Array(1, 2, 3)
   val amount = 4
 
-  val number_of_iterations = Solution.makeChange(denominations=coins, amount)
-
-
-  val message = s"Number of Ways to Make Amount $amount, with coins"
-  println(message)
-
-}
-
-object Solution {
+  val number_of_iterations = MakingChange.makeChange(denominations=coins, amount)
 
   def makeChange(denominations: Array[Int], amountSought: Int) = {
     require(denominations.size > 0 && amountSought > 0)
@@ -51,4 +43,7 @@ object Solution {
 
     loop(denominations, amountSought)
   }
+  val message = s"Number of Ways to Make Amount $amount, with coins"
+  println(message)
+
 }

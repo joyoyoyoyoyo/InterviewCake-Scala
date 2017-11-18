@@ -1,4 +1,4 @@
-object Q01_AppleStocks extends App {
+object AppleStocks {
 
   def getMaxProfit(stockPricesYesterday: Array[Int]): Int = {
 
