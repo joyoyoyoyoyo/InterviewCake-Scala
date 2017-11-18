@@ -1,6 +1,6 @@
 import scala.annotation.tailrec
 
-object ProductOfAllOtherNumbers  extends App {
+object ProductOfAllOtherNumbers {
 
   getProductsOfAllIntsExceptAtIndex(Array(1, 2, 3, 4, 5))
 
