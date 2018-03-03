@@ -20,8 +20,4 @@ object AppleStocks {
     }
     maxProfit
   }
-
-  def maxProfitFunc(stockPricesYesterday: List[Int]) = {
-    stockPricesYesterday.reduceLeft( _ min _ )
-  }
 }
